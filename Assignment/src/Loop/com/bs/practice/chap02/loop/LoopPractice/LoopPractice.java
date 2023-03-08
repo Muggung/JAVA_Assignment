@@ -124,6 +124,8 @@ public class LoopPractice {
 			}
 		} else if(firstNum < 1 || secondNum < 1) {
 			System.out.println("1이상의 숫자를 입력해주세요.");
+		} else {
+			System.out.println("같은 숫자를 입력했습니다.");
 		}
 	}
 	

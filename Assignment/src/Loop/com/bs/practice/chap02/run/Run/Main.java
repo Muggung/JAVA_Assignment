@@ -8,7 +8,7 @@ public class Main {
 		// new LoopPractice().practice3();
 		// new LoopPractice().practice4();
 		// new LoopPractice().practice5();
-		// new LoopPractice().practice6();
-		new LoopPractice().practice7();
+		new LoopPractice().practice6();
+		// new LoopPractice().practice7();
 	}
 }
