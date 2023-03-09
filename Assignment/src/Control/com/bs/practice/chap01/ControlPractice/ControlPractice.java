@@ -276,11 +276,17 @@ public class ControlPractice {
 		
 		switch(choice) {
 			case 1 :
-				
+				System.out.printf("선택 %d, 프로그램 실행\n", choice);
+				practice1();
+				break;
 			case 2 :
-				
+				System.out.printf("선택 %d, 프로그램 실행\n", choice);
+				practice2();
+				break;
 			case 3 :
-				
+				System.out.printf("선택 %d, 프로그램 실행\n", choice);
+				practice3();
+				break;
 			case 4 : 
 				System.out.printf("선택 %d, 프로그램 실행\n", choice);
 				practice4();
@@ -300,8 +306,9 @@ public class ControlPractice {
 			case 8 : 
 				System.out.printf("선택 %d, 프로그램 실행\n", choice);
 				practice8();
-				break;
-			case 9 :
+				
+
+	case 9 :
 				System.out.printf("선택 %d, 프로그램 실행\n", choice);
 				practice9();
 				break;
@@ -311,5 +318,35 @@ public class ControlPractice {
 				break;
 		}
 	}
-
+	
+	public void practice11() {
+		Scanner sc = new Scanner(System.in);
+		/*
+		 * 1. 4자리 비밀번호 정수를 입력받는다.
+		 * 2. 입력받은 정수가 각 자리수에 중복되는 값이 없으면 "생성 성공" 출력
+		 * 2-1. 중복되는 값이 있으면 "중복 값 있음" 출력
+		 * 2-2. 자리수가 4자리 초과면 "자리수 안맞음" 출력
+		 * 3. 단, 제일 앞자리수는 1~9 사이 정수
+		 */
+		System.out.print("비밀번호 입력(10000~9999) : ");
+		int num = sc.nextInt();
+		double remainNum1 = (num * 0.001) % 10;
+		double remainNum2 = (num * 0.01) % 10;
+		double remainNum3 = (num * 0.1) % 10;
+		int remainNum4 = num % 10;
+		
+		String maxNum =  Integer.toString(num);
+		
+		if(maxNum.length() > 4) {
+			System.out.println("자리수 안맞음");
+		} else if((int) remainNum1 == (int) remainNum2 || (int) remainNum1 == (int) remainNum3
+				|| (int) remainNum1 == remainNum4 || (int) remainNum2 == (int) remainNum3
+				|| (int) remainNum2 == remainNum4 || (int) remainNum3 == remainNum4) {
+			System.out.println("중복값 있음");
+		} else if((int) remainNum1 >= 10 || (int) remainNum1 <= 0) {
+			System.out.println("1~9사이의 정수를 입력해주세요.");
+		} else {
+			System.out.println("생성 성공!");
+		}
+	}
 }
