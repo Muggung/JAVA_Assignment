@@ -143,4 +143,33 @@ public class ArrayPractice {
 		}
 		System.out.println(Arrays.toString(numArr) + "\n총합 : " + sum);
 	}
+	
+	public void practice8() {
+		Scanner sc = new Scanner(System.in);
+		/*
+		 * 1. 3이상인 홀수를 입력받는다.
+		 * 2. 배열의 중간까지 1부터 1씩 증가하여 오름차순으로 값을 넣는다.
+		 * 3. 중간 이후부터 끝까지 1씩 감소하여 내림차순으로 값을 넣는다.
+		 * 4, 단, 입력한 정수가 홀수가 아니거나 3미만일 경우 "다시 입력하세요" 출력 후 다시 입력받기
+		 */
+		System.out.print("숫자를 입력해주세요 : ");
+		int userNum = sc.nextInt();
+		
+		while(userNum % 2 == 0 || userNum < 3) {
+			System.out.print("다시 입력하세요 : ");
+			userNum = sc.nextInt();
+		}
+		
+		int middleArr[] = new int[userNum];
+		int middleNum = (userNum-1) / 2; 
+		
+		for(int i=0; i<middleArr.length; i++) {
+			if(middleNum < i) {
+				middleArr[i] = userNum - i;
+			} else {
+				middleArr[i] = i + 1;
+			}
+		}
+		System.out.println(Arrays.toString(middleArr));
+	}
 }
