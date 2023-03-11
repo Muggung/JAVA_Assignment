@@ -265,6 +265,7 @@ public class ControlPractice {
 			System.out.println("Pass");
 		}
 	}
+	
 	public void practice10() {
 		Scanner sc = new Scanner(System.in);
 		/*
@@ -306,9 +307,8 @@ public class ControlPractice {
 			case 8 : 
 				System.out.printf("선택 %d, 프로그램 실행\n", choice);
 				practice8();
-				
-
-	case 9 :
+				break;
+			case 9 :
 				System.out.printf("선택 %d, 프로그램 실행\n", choice);
 				practice9();
 				break;
