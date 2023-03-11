@@ -355,18 +355,30 @@ public class ArrayPractice {
 		 * 3. 단, 사용자에게 값을 더 넣을건지, 몇개를 더 입력할건지, 늘린 공간에 어떤 데이터를 넣을건지 입력받는다.
 		 * 4. 사용자가 더이상 입력하지 않겠다고 하면 배열 전체 값을 출력
 		 */
+		boolean isEnd = false;
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int arrSize = sc.nextInt();
-		int indexNum = 1;
 		
-		String msgArr[] = new String[arrSize];
+		String msgArr[] = new String[1000];
 		
-		for(int i=0; i<msgArr.length; i++) {
-			System.out.print(indexNum + "번째 문자열 : ");
+		for(int i=0; i<arrSize; i++) {
+			System.out.print(i + 1 + "번째 문자열 : ");
 			msgArr[i] = sc.next();
-			indexNum++;
-			System.out.print("더 값을 입력하시겠어요??(Y/N) ");
-			char isContinue = sc.next().charAt(0);
+			if(i == arrSize-1) {
+				System.out.print("값을 더 입력하시겠습니까?(Y/N) ");
+				char isContinue = sc.next().charAt(0);
+				if(isContinue == 'Y') {
+					while(!isEnd) {
+						System.out.print("더 입력하고 싶은 개수 : ");
+						int moreArr = sc.nextInt();
+						arrSize += moreArr;
+						break;
+					}
+				} else if (isContinue == 'N') {
+					String newArr[] = Arrays.copyOf(msgArr, arrSize);
+					System.out.println(Arrays.toString(newArr));
+				}
+			}
 		}
 	}
 }
