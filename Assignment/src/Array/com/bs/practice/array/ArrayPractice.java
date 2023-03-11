@@ -368,12 +368,9 @@ public class ArrayPractice {
 				System.out.print("값을 더 입력하시겠습니까?(Y/N) ");
 				char isContinue = sc.next().charAt(0);
 				if(isContinue == 'Y') {
-					while(!isEnd) {
-						System.out.print("더 입력하고 싶은 개수 : ");
-						int moreArr = sc.nextInt();
-						arrSize += moreArr;
-						break;
-					}
+					System.out.print("더 입력하고 싶은 개수 : ");
+					int moreArr = sc.nextInt();
+					arrSize += moreArr;
 				} else if (isContinue == 'N') {
 					String newArr[] = Arrays.copyOf(msgArr, arrSize);
 					System.out.println(Arrays.toString(newArr));
