@@ -47,6 +47,7 @@ public class ControlPractice {
 		 * 3. 정수가 양수이면서 짝수가 아니면 "홀수다" 출력
 		 * 4. 정수가 양수가 아니면 "양수만 입력해주세요" 출력
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int num = sc.nextInt();
 		
@@ -69,6 +70,7 @@ public class ControlPractice {
 		 * 2-3. 불합격 : 합격 조건에 부합하지 않은 경우
 		 * 3. 합격일 경우 "축하합니다. 합격입니다!" / 불합격일 경우 "불합격입니다." 출력
 		 */
+		
 		System.out.print("국어 점수를 입력해주세요 : ");
 		int kor = sc.nextInt();
 		System.out.print("영어 점수를 입력해주세요 : ");
@@ -94,6 +96,7 @@ public class ControlPractice {
 		 * switch문으로 봄, 여름, 가을, 겨울 표현하기
 		 * 1, 2, 12월 -> 겨울 | 3, 4, 5월 -> 봄 | 6, 7, 8월 -> 여름 | 9, 10, 11월 -> 가을 
 		 */
+		
 		System.out.println("월을 입력해주세요 : ");
 		int season = sc.nextInt();
 		switch(season) {
@@ -124,6 +127,7 @@ public class ControlPractice {
 		 * 3-2. 둘 다 다르면 "로그인 실패" 출력
 		 * 3-3. 아이디 혹은 비밀번호가 틀렸을시, "아이디가 틀렸습니다.", "비밀번호가 틀렸습니다" 처럼 출력해서 알려주기
 		 */
+		
 		String userID = "admin";
 		String userPW = "12345";
 		
@@ -151,6 +155,7 @@ public class ControlPractice {
 		 * 3. 회원 = 게시글 작성, 게시글 조회, 댓글 작성
 		 * 4. 비회원 = 게시글 조회
 		 */
+		
 		System.out.print("권한을 확인하고자 하는 회원 등급 : ");
 		String user = sc.next();
 		
@@ -178,6 +183,7 @@ public class ControlPractice {
 		 * 2-4. BMI 지수가 25이상 30미만일 경우 비만
 		 * 2-5. BMI 지수가 30이상일 경우 고도 비만
 		 */
+		
 		System.out.print("키를 입력해주세요 : ");
 		double height = sc.nextDouble();
 		System.out.print("몸무게를 입력해주세요 : ");
@@ -205,6 +211,7 @@ public class ControlPractice {
 		 * 2. 입력받은 정수와 연산기호에 맞춰 연산 결과를 출력한다.
 		 * 3. 단, 두 개의 정수 모두 양수일 때만 작동하며 없는 연산 기호를 입력했을 시 "잘못 입력하셨습니다. 프로그램을 종료합니다." 출력
 		 */
+		
 		System.out.print("첫번째 피연산자 입력 : ");
 		int num = sc.nextInt();
 		System.out.print("두번째 피연산자 입력 : ");
@@ -240,6 +247,7 @@ public class ControlPractice {
 		 * 4. 이 때, 출석 비율은 출석 회수의 총 강의 회수 20회 중에서 출석한 날만 따진 값으로 계산한다.
 		 * 5. 70점 이상일 경우 "Pass", 70점 미만이거나 전체 강의에 30% 이상 결석 시 "Fail"을 출력한다.
 		 */
+		
 		System.out.print("중간고사 점수를 입력하세요 : ");
 		int test1 = sc.nextInt();
 		System.out.print("기말고사 점수를 입력하세요 : ");
@@ -271,6 +279,7 @@ public class ControlPractice {
 		/*
 		 * 앞에 구현한 실습문제를 선택하여 실행할 수 있는 메뉴화면을 구현
 		 */
+		
 		System.out.println("실행할 기능을 선택하세요 : ");
 		System.out.println("1. 메뉴 출력\n2. 짝수/홀수\n3. 합격/불합격\n4. 계절\n5. 로그인\n6. 권한 확인\n7. BMI\n8. 계산기\n9. P/F");
 		int choice = sc.nextInt();
@@ -328,6 +337,7 @@ public class ControlPractice {
 		 * 2-2. 자리수가 4자리 초과면 "자리수 안맞음" 출력
 		 * 3. 단, 제일 앞자리수는 1~9 사이 정수
 		 */
+		
 		System.out.print("비밀번호 입력(10000~9999) : ");
 		int num = sc.nextInt();
 		double remainNum1 = (num * 0.001) % 10;
