@@ -7,6 +7,7 @@ public class Loop_Plus {
 		/*
 		 * 1부터 100까지 출력하기
 		 */
+		
 		for(int i=1; i<=100; i++) {
 			System.out.println(i);
 		}
@@ -16,6 +17,7 @@ public class Loop_Plus {
 		/*
 		 * 100부터 1까지 출력하기
 		 */
+		
 		for(int i=100; i>=0; i--) {
 			System.out.println(i);
 		}
@@ -25,6 +27,7 @@ public class Loop_Plus {
 		/*
 		 * 1부터 100까지 숫자 중 짝수만 출력하기
 		 */
+		
 		for(int i=1; i<=100; i++) {
 			if(i % 2 == 0) {
 				System.out.println(i);
@@ -36,6 +39,7 @@ public class Loop_Plus {
 		/*
 		 * 1부터 100까지 전부 더하기
 		 */
+		
 		int sum = 0;
 		for(int i=1; i<=100; i++) {
 			sum += i;
@@ -48,6 +52,7 @@ public class Loop_Plus {
 		/*
 		 * 입력한 정수 짝수만 출력
 		 */
+		
 		System.out.print("정수 입력 : ");
 		int inputNum = sc.nextInt();
 		
@@ -63,6 +68,7 @@ public class Loop_Plus {
 		/*
 		 * 입력한 정수 짝수만 출력하고 더하기
 		 */
+		
 		System.out.print("정수 입력 : ");
 		int inputNum = sc.nextInt();
 		int sum = 0;
@@ -84,6 +90,7 @@ public class Loop_Plus {
 		 * 3. 짝수면 "박"
 		 * 3-1. 홀수면 "수" 출력
 		 */
+		
 		System.out.print("정수 입력 : ");
 		int waterMelon = sc.nextInt();
 		
@@ -103,6 +110,7 @@ public class Loop_Plus {
 		 * 2. 입력한 정수의 구구단을 출력
 		 * 3. 정수는 1 ~ 9사이의 숫자를 입력받고 숫자가 일치하지않으면 "잘못입력했습니다." 출력
 		 */
+		
 		System.out.println("=====구구단=====");
 		System.out.print("몇 단 : ");
 		int multiNum = sc.nextInt();
@@ -123,6 +131,7 @@ public class Loop_Plus {
 		 * 3. 문자열에 포함된 문자 값이라면 "포함된 갯수 : @개" 출력
 		 * 4. 입력받은 문자열에 영어가 아니면 "영문자가 아닙니다." 출력
 		 */
+		
 		System.out.print("문자열을 입력 : ");
 		String userInput = sc.next();
 		
@@ -151,6 +160,7 @@ public class Loop_Plus {
 		 * 2. 입력받은 값들을 저장한다.
 		 * 3. 저장받은 값들을 마지막에 모두 출력한다.
 		 */
+		
 		boolean isOK = false;
 		String msg = "";
 		
@@ -188,6 +198,7 @@ public class Loop_Plus {
 		 * 3. 위의 값들 중 하나를 입력받고 '게임종료'를 입력받을 때 까지 반복한다.
 		 * 4. '게임종료'를 입력받으면 "정말로 종료하시겠습니까?" 출력 후 결정에 따르기
 		 */
+		
 		System.out.println("\t0. 사냥시작");
 		System.out.print("여기에 0을 입력하면 게임시작 : ");
 		
