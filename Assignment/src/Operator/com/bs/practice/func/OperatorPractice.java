@@ -26,6 +26,7 @@ public class OperatorPractice {
 		 * 1. 숫자를 입력받는다.
 		 * 2. 입력받은 숫자가 양수면 "양수입니다.", 0이면 "0입니다.", 0이 아니면 "음수입니다." 출력
 		 */
+		
 		System.out.println("숫자를 입력해주세요 : ");
 		int inputNum = sc.nextInt();
 		
@@ -39,6 +40,7 @@ public class OperatorPractice {
 		 * 1. 숫자를 입력받는다.
 		 * 2. 입력받은 숫자가 짝수면 "짝수입니다.", 짝수가 아니면 "홀수입니다." 출력
 		 */
+		
 		System.out.println("숫자를 입력해주세요 : ");
 		int inputNum = sc.nextInt();
 		
@@ -52,6 +54,7 @@ public class OperatorPractice {
 		 * 1. 인원 수 변수와 사탕 개수 변수를 만들고 변수에 각각 입력받는다.
 		 * 2. 1인당 받은 사탕 개수와 남은 사탕 개수를 출력한다.
 		 */
+		
 		System.out.print("인원 수 : ");
 		int peopleNum = sc.nextInt();
 		System.out.print("사탕 개수 : ");
@@ -70,6 +73,7 @@ public class OperatorPractice {
 		 * 2. 입력 받은 정보를 "@학년 @반 @번 @@@ @학생의 성적은 @점이다." 처럼 출력한다.
 		 * 2-1. 이 때 성별이 'M'이면 "남학생", 'F'면 "여학생"으로 출력한다.
 		 */
+		
 		System.out.print("이름 : ");
 		String userName = sc.nextLine();
 		
@@ -139,6 +143,7 @@ public class OperatorPractice {
 		 * 1. 주민번호(- 포함)를 입력받는다.
 		 * 2. 입력받은 주민번호(-포함)로 남자인지, 여자인지 출력한다.
 		 */
+		
 		System.out.println("주민번호(- 포함)를 입력해주세요 : ");
 		String securityNum = sc.nextLine();
 		
@@ -155,6 +160,7 @@ public class OperatorPractice {
 		 * 3. 입력 받은 정수가 num1 이하거나 num2 초과라면 true 출력, 아니면 false 출력
 		 * 4. num1은 num2보다 작아야한다.
 		 */
+		
 		System.out.print("정수 1 : ");
 		int num1 = sc.nextInt();
 		System.out.print("정수 2 : ");
@@ -172,6 +178,7 @@ public class OperatorPractice {
 		 * 1. 세개의 수를 입력받는다.
 		 * 2. 세개의 수가 모두 같은 수면 true, 아니면 false 출력
 		 */
+		
 		System.out.print("첫번째 수 : ");
 		int num1 = sc.nextInt();
 		System.out.print("두번째 수 : ");
@@ -186,7 +193,6 @@ public class OperatorPractice {
 	public void practice11() {
 		Scanner sc = new Scanner(System.in);
 		DecimalFormat df = new DecimalFormat("#.##");
-
 		/*
 		 * 실습문제 11
 		 * 1. 각각 A, B, C사원의 연봉을 입력받는다.
@@ -194,6 +200,7 @@ public class OperatorPractice {
 		 * 3. 인센티브 포함 급여가 3000만원 이상이면 "3000 이상", 미만이면 "3000미만" 출력
 		 * 4. 인센티브는 A = 0.4, B = 없음, C = 0.15다.
 		 */
+		
 		double incen_A = 0.4, incen_B = 0, incen_C = 0.15;
 		
 		System.out.print("A사원 연봉 : ");
@@ -214,5 +221,4 @@ public class OperatorPractice {
 		System.out.println("C사원 연봉/연봉 + a : " + salary_C + "/" + df.format(resultC));
 		System.out.println(resultC >= 3000 ? "3000 이상" : "3000 미만");
 	}
-
 }
