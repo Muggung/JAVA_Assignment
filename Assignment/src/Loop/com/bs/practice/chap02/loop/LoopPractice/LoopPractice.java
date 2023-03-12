@@ -10,6 +10,7 @@ public class LoopPractice {
 		 * 2-1. 단, 입력받은 값은 1이상이어야한다.
 		 * 2-2. 만일 1미만의 숫자를 입력받았으면 "1이상의 숫자를 입력해주세요."를 출력
 		 */
+		
 		System.out.print("1이상의 숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 		
@@ -29,6 +30,7 @@ public class LoopPractice {
 		 * 2. 1미만의 숫자를 입력받고 "1이상의 숫자를 입력해주세요."를 출력
 		 * 2-1. 다시 사용자가 값을 입력할 수 있도록 한다.
 		 */
+		
 		System.out.println("1이상의 숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 
@@ -45,6 +47,7 @@ public class LoopPractice {
 		 * 2. 1부터 입력받은 값까지 거꾸로 출력한다.
 		 * 3. 단, 입력받은 값이 1미만의 숫자라면 "1이상의 숫자를 입력해주세요."를 출력
 		 */
+		
 		System.out.println("1이상의 숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 		
@@ -62,6 +65,7 @@ public class LoopPractice {
 		 * 2. 1미만의 숫자를 입력받고 "1이상의 숫자를 입력해주세요."를 출력
 		 * 2-1. 다시 사용자가 값을 입력할 수 있도록 한다.
 		 */
+		
 		System.out.println("1이상의 숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 		
@@ -85,8 +89,10 @@ public class LoopPractice {
 		 * 1. 사용자에게 값을 입력받는다.
 		 * 2. 1부터 입력받은 값까지의 정수들의 합을 출력한다.
 		 */
+		
 		System.out.print("정수 하나를 입력하세요 : ");
 		int userNum = sc.nextInt();
+		
 		int sum = 0;
 		
 		for(int i=1; i<=userNum; i++) {
@@ -106,6 +112,7 @@ public class LoopPractice {
 		 * 2. 입력받은 두 값의 사이에 있는 숫자를 출력한다.
 		 * 3. 만일 1미만의 숫자가 입력된다면 "1이상의 숫자를 입력해주세요." 출력
 		 */
+		
 		System.out.print("첫번째 숫자를 입력해주세요 : ");
 		int firstNum = sc.nextInt();
 		System.out.print("두번째 숫자를 입력해주세요 : ");
@@ -135,6 +142,7 @@ public class LoopPractice {
 		 * 2. 입력받은 두 값의 사이에 있는 숫자를 출력한다.
 		 * 3. 만일 1미만의 숫자가 입력된다면 "1이상의 숫자를 입력해주세요." 출력
 		 */
+		
 		System.out.print("첫번째 숫자를 입력해주세요 : ");
 		int firstNum = sc.nextInt();
 		System.out.print("두번째 숫자를 입력해주세요 : ");
@@ -168,8 +176,10 @@ public class LoopPractice {
 		 * 1. 사용자에게 값을 입력받는다.
 		 * 2. 입력받은 값의 구구단 값 * 9까지 출력한다.
 		 */
+		
 		System.out.print("값을 입력해주세요 : ");
 		int num = sc.nextInt();
+		
 		System.out.printf("======%d단======\n", num);
 		
 		for(int i=1; i<=9; i++) {
@@ -184,6 +194,7 @@ public class LoopPractice {
 		 * 2. 9를 초과하는 수를 입력했으면 "9이하의 숫자를 입력해주세요" 출력
 		 * 3. 출력 후 다시 사용자가 값을 입력한다.
 		 */
+		
 		System.out.print("값을 입력해주세요 : ");
 		int num = sc.nextInt();
 		
@@ -205,6 +216,7 @@ public class LoopPractice {
 		 * 2. 9를 초과하는 수를 입력했으면 "9이하의 숫자를 입력해주세요" 출력
 		 * 3. 출력 후 다시 사용자가 값을 입력한다.
 		 */
+		
 		System.out.print("값을 입력해주세요 : ");
 		int num = sc.nextInt();
 		
@@ -226,6 +238,7 @@ public class LoopPractice {
 		 * 2. 일정한 값으로 숫자가 커지거나 작아지는 기능구현
 		 * 3. 단, 출력되는 숫자는 총 10개다.
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 		System.out.print("공차를 입력해주세요 : ");
@@ -247,6 +260,7 @@ public class LoopPractice {
 		 * 3-2. 없는 연산자 입력시 "없는 연산자입니다. 다시 입력해주세요." 출력
 		 * 3-3. 두 경우 모두 처음으로 돌아가 다시 연산자부터 입력받는다.
 		 */
+		
 		boolean isOver = false;
 		String opStr = "";
 		
@@ -298,6 +312,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		
@@ -314,6 +329,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기 거꾸로
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		
@@ -332,6 +348,7 @@ public class LoopPractice {
 		 * 2. 입력받은 값이 소수인지 판별한다.
 		 * 3. 단, 입력받은 값이 2 미만일 경우 "잘못입력하셨습니다." 출력
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int decimal = sc.nextInt();
 		int isDecimal = -1;
@@ -354,6 +371,7 @@ public class LoopPractice {
 		 * 1. practice15랑 동일한 기능이다.
 		 * 2. 단, 입력받은 값이 2 미만일 경우 "잘못입력했습니다." 출력 후 다시 사용자가 값을 입력
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int decimal = sc.nextInt();
 		int isDecimal = -1;
@@ -378,6 +396,7 @@ public class LoopPractice {
 		 * 2. 입력받은 정수를 2부터 정수까지의 모든 소수를 출력한다.
 		 * 3. 입력한 수가 2 미만일 경우 "잘못입력했습니다." 출력
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int decimal = sc.nextInt();
 		
@@ -406,6 +425,7 @@ public class LoopPractice {
 		 * 2-1. 2와 3의 배수를 모두 출력
 		 * 2-2. 2와 3의 공배수를 출력
 		 */
+		
 		System.out.print("수를 입력해주세요 : ");
 		int drainAge = sc.nextInt();
 		int drainCount = 0;
@@ -424,6 +444,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기
 		 */
+		
 		System.out.println("수를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		
@@ -444,6 +465,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기
 		 */
+		
 		System.out.print("수를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		for(int i=1; i<=starNum; i++) {
@@ -465,6 +487,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기
 		 */
+		
 		System.out.print("수를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		
@@ -485,6 +508,7 @@ public class LoopPractice {
 		/*
 		 * 별찍기
 		 */
+		
 		System.out.println("수를 입력해주세요 : ");
 		int starNum = sc.nextInt();
 		
