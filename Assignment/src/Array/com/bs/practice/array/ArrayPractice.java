@@ -38,6 +38,7 @@ public class ArrayPractice {
 		 * 1. 사용자에게 입력받은 정수만큼 배열크기를 할당한다.
 		 * 2. 1부터 입력받은 값까지 배열에 초기화한 후 출력
 		 */
+		
 		System.out.print("정수를 입력해주세요 : ");
 		int arrNum = sc.nextInt();
 		
@@ -55,6 +56,7 @@ public class ArrayPractice {
 		 * 2. 배열에 "사과", "귤", "포도", "복숭아", "참외" 값을 초기화한다.
 		 * 3. 배열 인덱스를 활용해 "귤" 출력
 		 */
+		
 		String fruit[] = {"사과", "귤", "포도", "복숭아", "참외"};
 		System.out.println(fruit[1]);
 	}
@@ -66,12 +68,14 @@ public class ArrayPractice {
 		 * 2. 입력받은 문자 하나하나를 배열에 넣는다.
 		 * 3. 배열에 검색할 문자가 문자열에 몇 개 들어있는지 개수와 위치한 인덱스 번호를 출력한다.
 		 */
+		
 		System.out.print("문자열 : ");
 		String msg = sc.next();
 		System.out.print("문자 : ");
 		char letter = sc.next().charAt(0);
 		
 		String indexNum = "";
+		
 		int count = 0;
 		char msgArr[] = new char[msg.length()];
 		
@@ -92,6 +96,7 @@ public class ArrayPractice {
 		 * 2. 0부터 6까지 숫자를 입력받아 입력한 숫자와 같은 인덱스에 있는 요일 출력
 		 * 3. 범위에 없는 숫자 입력시 "잘못입력했습니다." 출력
 		 */
+		
 		String monthArr[] = {"월요일", "화요일", "수요일", "목요일", "금요일", "토요일", "일요일"};
 		System.out.print("월요일(0) ~ 일요일(6)사이 숫자 입력 : ");
 		int inputMonth = sc.nextInt();
@@ -130,6 +135,7 @@ public class ArrayPractice {
 		 * 2. 배열의 크기만큼 사용자가 값을 입력하여 각 인덱스의 값을 초기화한다.
 		 * 3. 배열 전체 값을 출력하고 각 인덱스 값의 합을 출력한다.
 		 */
+		
 		int sum = 0;
 		System.out.print("정수를 입력해주세요(배열크기) : ");
 		int arrSize = sc.nextInt();
@@ -152,6 +158,7 @@ public class ArrayPractice {
 		 * 3. 중간 이후부터 끝까지 1씩 감소하여 내림차순으로 값을 넣는다.
 		 * 4, 단, 입력한 정수가 홀수가 아니거나 3미만일 경우 "다시 입력하세요" 출력 후 다시 입력받기
 		 */
+		
 		System.out.print("숫자를 입력해주세요 : ");
 		int userNum = sc.nextInt();
 		
@@ -182,11 +189,13 @@ public class ArrayPractice {
 		 * 2-2. 입력한 값이 배열에 없으면 "00치킨은 없는 메뉴입니다." 출력
 		 * 3. 단, (치킨메뉴)배열의 메뉴는 스스로 정한다.
 		 */
+		
 		System.out.println("=====메뉴=====");
 		System.out.println("후라이드 : 15000원\n양념 : 16000원\n반반 : 16000원\n갈릭 : 17000원\n불닭 : 17000원\n치즈 : 17000원");
 		
 		System.out.print("주문하실 치킨을 입력해주세요 : ");
 		String chicken = sc.next();
+		
 		String menuMsg = "";
 		
 		String menu[] = {"후라이드", "양념", "반반", "갈릭", "불닭", "치즈"};
@@ -209,6 +218,7 @@ public class ArrayPractice {
 		 * 2. 입력받은 주민등록번호 성별자리부터 *표시로 출력한다.
 		 * 3. 단, 원본배열 값은 변경없이 배열 복사본을 이용
 		 */
+		
 		System.out.print("주민등록번호(-포함)를 입력해주세요 : ");
 		String rrn = sc.next();
 		
@@ -239,6 +249,7 @@ public class ArrayPractice {
 		 * 1. 길이가 10인 정수형 배열을 만든다.
 		 * 2. 배열에 1 ~ 10 사이의 난수를 발생시키고 배열에 초기화 후 출력
 		 */
+		
 		int randomArr[] = new int[10];
 		
 		for(int i=0; i<randomArr.length; i++) {
@@ -253,6 +264,7 @@ public class ArrayPractice {
 		 * 2. 배열에 1 ~ 10 사이의 난수를 발생시키고 배열에 초기화 후 출력
 		 * 3. 배열 전체 값들 중 최대값과 최솟값을 출력한다.
 		 */
+		
 		int randomArr[] = new int[10];
 		int max_ArrNum = 0;
 		int min_ArrNum = 10;
@@ -267,6 +279,7 @@ public class ArrayPractice {
 			}
 			System.out.print(randomArr[i] + " ");
 		}
+		
 		System.out.println("\n최대값 : " + max_ArrNum);
 		System.out.println("최소값 : " + min_ArrNum);
 	}
@@ -277,6 +290,7 @@ public class ArrayPractice {
 		 * 2. 배열에 1 ~ 10 사이의 난수를 발생시키고 배열에 초기화 후 출력
 		 * 3. 단, 배열에 중복된 값이 없어야한다.
 		 */
+		
 		int randomArr[] = new int[10];
 		
 		for(int i=0; i<randomArr.length; i++) {
@@ -288,6 +302,7 @@ public class ArrayPractice {
 				}
 			}
 		}
+		
 		for(int i=0; i<randomArr.length; i++) {
 			System.out.print(randomArr[i] + " ");
 		}
@@ -298,6 +313,7 @@ public class ArrayPractice {
 		 * 1. 로또번호 생성기를 만든다.
 		 * 2. 총 6개의 숫자를 랜덤으로 만들고 중복된 값 없이 오름차순으로 정렬 후 출력
 		 */
+		
 		int lottoArr[] = new int[6];
 		
 		for(int i=0; i<lottoArr.length; i++) {
@@ -326,6 +342,7 @@ public class ArrayPractice {
 		 * 2. 입력받은 문자 하나하나를 배열에 넣는다.
 		 * 3. 문자열에 있는 문자를 하나씩 출력하고 문자 개수도 함께 출력
 		 */
+		
 		System.out.print("문자열 입력 : ");
 		String msg = sc.next();
 		int count = 0;
@@ -343,6 +360,7 @@ public class ArrayPractice {
 			}
 			msgSum += msgArr[i] + ", ";
 		}
+		
 		System.out.print("문자열에 있는 문자 : " + msgSum);
 		System.out.print("\n" + count);
 	}
@@ -355,6 +373,7 @@ public class ArrayPractice {
 		 * 3. 단, 사용자에게 값을 더 넣을건지, 몇개를 더 입력할건지, 늘린 공간에 어떤 데이터를 넣을건지 입력받는다.
 		 * 4. 사용자가 더이상 입력하지 않겠다고 하면 배열 전체 값을 출력
 		 */
+		
 		boolean isEnd = false;
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int arrSize = sc.nextInt();
