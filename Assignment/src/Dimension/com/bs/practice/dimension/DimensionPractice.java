@@ -9,6 +9,7 @@ public class DimensionPractice {
 		 * 1. 3행 3열짜리 문자열 배열을 선언 및 할당한다.
 		 * 2. 인덱스 0행 0열부터 2행 2열까지 차례대로 접근하여 "(0,0)"과 같은 형식으로 출력한다.
 		 */
+		
 		String strArr[][] = new String[3][3];
 		
 		for(int i=0; i<strArr.length; i++) {
@@ -25,6 +26,7 @@ public class DimensionPractice {
 		 * 1. 4행 4열짜리 정수형 배열을 선언 및 할당한다.
 		 * 2. 1 ~ 16까지 값을 차례대로 저장하고 출력한다.
 		 */
+		
 		int intArr[][] = new int[4][4];
 		int count = 1;
 		
@@ -42,6 +44,7 @@ public class DimensionPractice {
 		 * 1. 4행 4열짜리 정수형 배열을 선언 및 할당한다.
 		 * 2. 1 ~ 16까지 값을 차례대로 저장하고 거꾸로 출력한다.
 		 */
+		
 		int intArr[][] = new int[4][4];
 		
 		int count = 16;
@@ -61,6 +64,7 @@ public class DimensionPractice {
 		 * 2. 0행 0열부터 2행 2열까지는 1 ~ 10까지의 임의의 정수 값을 저장한다.
 		 * 3. '실습문제4' 그림표 처럼 결과를 출력한다.
 		 */
+		
 		int sumArr[][] = new int[4][4];
 		
 		for(int i=0; i<sumArr.length; i++) {
@@ -86,6 +90,7 @@ public class DimensionPractice {
 		 * 2. 1 ~ 10사이의 숫자가 아니면 "반드시 1 ~ 10사이의 정수를 입력해야 합니다." 출력 후 다시 입력받기
 		 * 3. 크기가 정해진 2차원 배열 안에 영어 대문자가 랜덤으로 들어가게 한 뒤 출력
 		 */
+		
 		System.out.print("행 크기 : ");
 		int row = sc.nextInt();
 		System.out.print("열 크기 : ");
@@ -116,6 +121,7 @@ public class DimensionPractice {
 		 * 1. 아래 초기화된 배열을 가지고 '실습문제6 그림'의 흐름대로 출력한다.
 		 * 2. 단, print()를 사용하고 값 사이에 띄어쓰기가 존재하도록 출력
 		 */
+		
 		// 초기화된 배열
 		String[][] strArr = new String[][] {
 			{"이", "까", "왔", "앞", "힘"},
@@ -140,6 +146,7 @@ public class DimensionPractice {
 		 * 2. 문자형 가변 배열을 선언 및 할당한다.
 		 * 3. 각 인덱스에 'a'부터 총 인덱스의 개수만큼 하나씩 늘려 저장 후 출력
 		 */
+		
 		System.out.print("행 크기를 입력해주세요 : ");
 		int row = sc.nextInt();
 		
@@ -170,6 +177,7 @@ public class DimensionPractice {
 		 * 2. 2열 3행으로 2차원 배열 2개를 이용해 분단을 나눈다,
 		 * 3. 1분단 왼쪽부터 오른쪽, 1행에서 아래 순으로 자리 배치
 		 */
+		
 		String studentArr[] = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배"
 				, "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하"};
 		
@@ -205,6 +213,7 @@ public class DimensionPractice {
 		 * 1. practice8번 문제랑 동일
 		 * 2. 자리 배치한것을 가지고 학생이름을 검색하여 해당 학생 자리 출력하기
 		 */
+		
 		String studentArr[] = {"강건강", "남나나", "도대담", "류라라", "문미미", "박보배"
 				, "송성실", "윤예의", "진재주", "차천축", "피풍표", "홍하하"};
 		
