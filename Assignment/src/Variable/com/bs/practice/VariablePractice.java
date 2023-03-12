@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class VariablePractice {
 	public void user() {
 		Scanner sc = new Scanner(System.in);
-		
 		/*
 		 * 실습 문제 1
 		 * 1. 이름, 성별, 나이, 키를 각 변수에 입력받는다.
