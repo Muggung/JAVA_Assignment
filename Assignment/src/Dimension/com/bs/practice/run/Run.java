@@ -1,5 +1,5 @@
-package com.bs.practice.run;
-import com.bs.practice.dimension.*;
+package Dimension.com.bs.practice.run;
+import Dimension.com.bs.practice.dimension.*;
 
 public class Run {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.bs.practice.dimension;
+package Dimension.com.bs.practice.dimension;
 
 import java.util.Arrays;
 import java.util.Scanner;
