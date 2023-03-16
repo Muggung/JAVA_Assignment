@@ -7,7 +7,7 @@ public class Run {
 		Employee e1 = new Employee(123, "동동이", "학생부", "수강생", 25, '남', 50, 0, "010-0000-0000", "어딜까?");
 		Employee e2 = new Employee(999, "이순신");
 		
-		e2.setDept("부부부");
+		e2.setDept("잉꼬부부");
 		e2.setJob("학생");
 		e2.setAge(23);
 		e2.setGender('남');
