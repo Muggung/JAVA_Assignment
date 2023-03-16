@@ -17,14 +17,6 @@ public class Employee {
 	public Employee(int empNo, String empName) {
 		this.empNo=empNo;
 		this.empName=empName;
-		this.dept = "영업부";
-		this.job = "과장";
-		this.age = 25;
-		this.gender = '남';
-		this.salary = 2500000;
-		this.bonusPoint = 0.05;
-		this.phone = "010-1234-5678";
-		this.address = "서울시 강남구";
 	}
 	
 	public Employee(int empNo, String empName, String dept, String job, int age, char gender,
