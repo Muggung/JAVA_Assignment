@@ -89,9 +89,9 @@ public class ShapeMenu {
 			System.out.print("너비 : ");
 			double width = sc.nextDouble();
 			if(menuNum == 1) {
-				scr.calcPerimeter(height, width);
+				System.out.println("사각형 둘레 : " + scr.calcPerimeter(height, width) + "\n");
 			} else if(menuNum == 2) {
-				scr.calcArea(height, width);
+				System.out.println("사각형 면적 : " + scr.calcArea(height, width) + "\n");
 			}
 		} else if(type == 4 && menuNum == 3) {
 			System.out.print("색깔을 입력해주세요 : ");

@@ -8,12 +8,16 @@ public class SquareController {
 	
 	// 메소드
 	public double calcPerimeter(double height, double width) {
-		new Shape(4, height, width);
+		s.setType(4);
+		s.setHeight(height);
+		s.setWidth(width);
 		return (height + width) * 2;
 	}
 	
 	public double calcArea(double height, double width) {
-		new Shape(4, height, width);
+		s.setType(4);
+		s.setHeight(height);
+		s.setWidth(width);
 		return height * width;
 	}
 	
