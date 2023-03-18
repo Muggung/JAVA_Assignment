@@ -120,7 +120,8 @@ public class MemberMenu {
 			case 1 : searchId(); break;
 			case 2 : searchName(); break;
 			case 3 : searchEmail(); break;
-			default : System.out.println("잘못입력하셨습니다."); return;
+			case 9 : return;
+			default : System.out.println("잘못입력하셨습니다. 메인메뉴로 돌아갑니다."); return;
 		}
 	}
 	
@@ -158,7 +159,7 @@ public class MemberMenu {
 	
 	// 이메일검색 입력
 	public void searchEmail() {
-		// searchName과 동일
+		// searchName()과 동일
 		System.out.println("===== 이메일로 회원 조회 =====");
 		System.out.print("찾으실 회원 이메일 : ");
 		String email = sc.next();
@@ -175,31 +176,131 @@ public class MemberMenu {
 	
 	// 회원정보수정 메뉴출력
 	public void updateMember() {
+		// 메뉴에 없는 번호 입력했을 경우 "잘못입력하셨습니다." 출력 후 mainMenu로 돌아감
+		System.out.println("===== 회원 정보 수정 =====");
+		System.out.println("1. 비밀번호 수정");
+		System.out.println("2. 이름 수정");
+		System.out.println("3. 이메일 수정");
+		System.out.println("9. 메인으로 돌아가기");
+		System.out.print("메뉴 번호 : ");
+		int menuChoice = sc.nextInt();
 		
+		switch(menuChoice) {
+			case 1 : updatePassword(); break;
+			case 2 : updateName(); break;
+			case 3 : updateEmail(); break;
+			case 9 : return;
+			default : System.out.println("잘못입력하셨습니다. 메인 메뉴로 돌아갑니다."); return;
+		}
 	}
 	
 	// 비밀번호수정 입력
 	public void updatePassword() {
-		
+		/* 1. 수정할 회원 아이디와 비밀번호를 입력받는다.
+		 * 2. 입력받은 데이터를 MemberController updatePassword() 메소드의 매개변수로 넘김
+		 * 3. 반환 값에 따라 출력 후 mainMenu로 돌아감
+		 * 3-1. 검색결과 없으면 "존재하지않는 아이디입니다." 출력
+		 * 3-2. 검색결과 있으면 "수정이 성공적으로 되었습니다." 출력
+		 */
+		System.out.println("===== 비밀번호 수정 =====");
+		System.out.print("회원 아이디 : ");
+		String id = sc.next();
+		if(mc.checkId(id)) {
+			System.out.println("존재하지않는 아이디입니다.");
+			return;
+		} else {
+			System.out.print("수정할 비밀번호 : ");
+			String pw = sc.next();
+			if(mc.updatePassword(id, pw)) {
+				System.out.println("수정이 성공적으로 되었습니다.");
+				return;
+			}
+		}
 	}
 	
 	// 이름수정 입력
 	public void updateName() {
-		
+		// updatePassword()과 동일
+		System.out.println("===== 이름 수정 =====");
+		System.out.print("회원 아이디 : ");
+		String id = sc.next();
+		if(mc.checkId(id)) {
+			System.out.println("존재하지않는 아이디입니다.");
+			return;
+		} else {
+			System.out.print("수정할 이름 : ");
+			String name = sc.next();
+			if(mc.updateName(id, name)) {
+				System.out.println("수정이 성공적으로 되었습니다.");
+				return;
+			}
+		} 
 	}
 	
 	// 이메일수정 입력
 	public void updateEmail() {
-		
+		// updateName()과 동일
+		System.out.println("===== 이메일 수정 =====");
+		System.out.print("회원 아이디 : ");
+		String id = sc.next();
+		if(mc.checkId(id)) {
+			System.out.println("존재하지않는 아이디입니다.");
+			return;
+		} else {
+			System.out.print("수정할 이메일 : ");
+			String email = sc.next();
+			if(mc.updateEmail(id, email)) {
+				System.out.println("수정이 성공적으로 되었습니다.");
+				return;
+			}
+		}
 	}
 	
 	// 삭제메뉴 출력
 	public void deleteMember() {
+		// 메뉴에 없는 번호 입력했을 경우 "잘못입력하셨습니다." 출력 후 mainMenu로 돌아감
+		System.out.println("===== 회원 삭제 메뉴 =====");
+		System.out.println("1. 특정 회원 삭제");
+		System.out.println("2. 모든 회원 삭제");
+		System.out.println("9. 메인으로 돌아가기");
+		System.out.print("메뉴 번호 : ");
+		int menuChoice = sc.nextInt();
 		
+		switch(menuChoice) {
+			case 1 : deleteOne(); return;
+			case 2 : deleteAll(); return;
+			case 9 : return;
+			default : System.out.println("잘못입력하셨습니다. 메인 메뉴로 돌아갑니다."); return;
+		}
 	}
 	
 	// 회원정보 하나 삭제 후 결과 출력
 	public void deleteOne() {
+		/* 1. 삭제할 회원 아이디를 입력받는다.
+		 * 2. 사용자에게 정말 삭제할건지 Y/N으로 묻는다.
+		 * 3. Y의 경우 MemberController delete() 메소드의 매개변수로 아이디를 넘김
+		 * 3-1. N의 경우 mainMenu로 돌아감
+		 * 4. MemberController delete()의 반환 값에 따라 출력 후 mainMenu로 돌아감
+		 * 4-1. 검색결과 없으면 "존재하지않는 아이디입니다." 출력
+		 * 4-2. 검색결과 있으면 "성공적으로 삭제하였습니다." 출력
+		 */
+		System.out.println("===== 특정 회원 삭제 =====");
+		System.out.print("삭제할 회원 아이디 : ");
+		String id = sc.next();
+		
+		if(mc.checkId(id)) {
+			System.out.println("존재하지않는 아이디입니다.");
+		} else {
+			System.out.print("정말로 삭제하시겠습니까?(Y/N)");
+			char choice = sc.next().charAt(0);
+			if(choice == 'N') {
+				System.out.println("메인메뉴로 돌아갑니다.");
+				return;
+			} else if (choice == 'Y') {
+				System.out.println(mc.delete(id) ? "성공적으로 삭제했습니다." : "삭제 실패했습니다. :(");
+				return;
+			}
+		}
 		
 	}
 	

@@ -11,11 +11,12 @@ public class MemberController {
 	// 메소드
 	// Member[]에 저장된 객체 수
 	public int existMemberNum() {
-		int count = 0;
+		int count = 1;
 		for(Member mb : m) {
 			if(mb != null) {
-				count++;
+				count++;   
 			} else {
+				count--;
 				break;
 			}
 		}
@@ -25,12 +26,8 @@ public class MemberController {
 	// 중복 아이디 확인
 	public boolean checkId(String inputId) {
 		for(int i=0; i<m.length; i++) {
-			if(m[0] == null) {
-				return true;
-			} else if(m[i].getId().equals(inputId)) {
+			if(m[i] != null && m[i].getId().equals(inputId)) {
 				return false;
-			} else {
-				break;
 			}
 		}
 		return true;
@@ -50,7 +47,7 @@ public class MemberController {
 	public String searchId(String id) {
 		String findId = "";
 		for(Member mb : m) {
-			if(mb.getId().equals(id)) {
+			if(mb != null && mb.getId().equals(id)) {
 				findId = mb.inform();
 				break;
 			} else {
@@ -101,22 +98,52 @@ public class MemberController {
 	
 	// 비밀번호 변경
 	public boolean updatePassword(String id, String password) {
-		
+		for(Member mb : m) {
+			if(mb != null && mb.getId().equals(id)) {
+				mb.setPassword(password);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	// 이름 변경
 	public boolean updateName(String id, String name) {
-		
+		for(Member mb : m) {
+			if(mb != null && mb.getId().equals(id)) {
+				mb.setName(name);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	// 이메일 변경
 	public boolean updateEmail(String id, String email) {
-		
+		for(Member mb : m) {
+			if(mb != null && mb.getId().equals(id)) {
+				mb.setEmail(email);
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	// 회원정보 하나 삭제
-	public boolean delete(String id) {
-		
+	public boolean delete(String id) {	
+		for(Member mb : m) {
+			if(mb != null && mb.getId().equals(id)) {
+				mb.setId(null);
+				mb.setName(null);
+				mb.setPassword(null);
+				mb.setEmail(null);
+				mb.setAge(0);
+				mb.setGender(' ');
+				mb = null;
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	// 전체회원정보 삭제
