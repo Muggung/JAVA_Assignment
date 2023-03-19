@@ -22,7 +22,6 @@ public class Member {
 		this.age = age;
 	}
 	
-	
 	// getter & setter
 	public String getId() {
 		return id;

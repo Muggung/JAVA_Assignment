@@ -9,15 +9,12 @@ public class MemberController {
 	public static final int SIZE = 10;
 	
 	// 메소드
-	// Member[]에 저장된 객체 수
+	// (수정)Member[]에 저장된 객체 수
 	public int existMemberNum() {
-		int count = 1;
+		int count = 10;
 		for(Member mb : m) {
-			if(mb != null) {
-				count++;   
-			} else {
+			if(mb == null) {
 				count--;
-				break;
 			}
 		}
 		return count;
@@ -57,7 +54,7 @@ public class MemberController {
 		return findId;
 	}
 	
-	// 이름으로 회원조회
+	// (수정)이름으로 회원조회
 	public Member[] searchName(String name) {
 		// 문제대로 풀기 너무 복잡했음...ㅠㅠ
 		Member[] nameArr;
@@ -67,9 +64,11 @@ public class MemberController {
 				arrLength++;
 			}
 		}
+		
 		nameArr = new Member[arrLength];
+		arrLength = 0;
+		
 		for(int i=0; i<m.length; i++) {
-			arrLength = 0;
 			if(m[i] != null && m[i].getName().equals(name)){
 				nameArr[arrLength++] = m[i];
 			}
@@ -77,7 +76,7 @@ public class MemberController {
 		return nameArr;
 	}
 	
-	// 이메일로 회원조회
+	// (수정)이메일로 회원조회
 	public Member[] searchEmail(String email) {
 		Member[] emailArr;
 		int arrLength = 0;
@@ -86,9 +85,11 @@ public class MemberController {
 				arrLength++;
 			}
 		}
+		
 		emailArr = new Member[arrLength];
+		arrLength = 0;
+
 		for(int i=0; i<m.length; i++) {
-			arrLength = 0;
 			if(m[i] != null && m[i].getEmail().equals(email)){
 				emailArr[arrLength++] = m[i];
 			}
@@ -129,17 +130,11 @@ public class MemberController {
 		return false;
 	}
 	
-	// 회원정보 하나 삭제
+	// (수정)회원정보 하나 삭제
 	public boolean delete(String id) {	
-		for(Member mb : m) {
-			if(mb != null && mb.getId().equals(id)) {
-				mb.setId(null);
-				mb.setName(null);
-				mb.setPassword(null);
-				mb.setEmail(null);
-				mb.setAge(0);
-				mb.setGender(' ');
-				mb = null;
+		for(int i=0; i<m.length; i++) {
+			if(m[i] != null && m[i].getId().equals(id)) {
+				m[i] = null;
 				return true;
 			}
 		}
@@ -148,11 +143,13 @@ public class MemberController {
 	
 	// 전체회원정보 삭제
 	public void delete() {
-		
+		for(int i=0; i<m.length; i++) {
+			m[i] = null;
+		}
 	}
 	
-	// 
+	// 전체회원정보 출력
 	public Member[] printAll() {
-		
+		return m;
 	}
 }

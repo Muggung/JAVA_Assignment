@@ -1,6 +1,5 @@
 package com.bs.hw3.member.view;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 import com.bs.hw3.member.controller.MemberController;
@@ -17,34 +16,32 @@ public class MemberMenu {
 	// 메소드
 	// 메인메뉴 출력
 	public void mainMenu() {
-		// 조건1. 현재 등록된 회원 수에 따라 메인메뉴를 다르게 출력한다.
-		if(mc.existMemberNum() < 10) {
-			// 1-1. 현재 등록된 회원 수가 10명이 아닐 때
+		// 조건1(수정). 현재 등록된 회원 수에 따라 메인메뉴를 다르게 출력한다.
 			while(true) {
-				System.out.println("===== 최대 등록 가능한 회원 수는 " + mc.SIZE + "명입니다. =====");
-				System.out.println("===== 현재 등록된 회원 수는 " + mc.existMemberNum() + "명입니다. =====");
-				System.out.println("1. 신규 회원 등록");
-				System.out.println("2. 회원 검색");
-				System.out.println("3. 회원 정보 수정");
-				System.out.println("4. 회원 삭제");
-				System.out.println("5. 전체 회원 출력");
-				System.out.println("9. 끝내기");
-				System.out.print("메뉴 번호 : ");
-				int menuChoice = sc.nextInt();
+				// 1-1. 현재 등록된 회원 수가 10명이 아닐 때
+				if(mc.existMemberNum() < 10) {
+					System.out.println("===== 최대 등록 가능한 회원 수는 " + mc.SIZE + "명입니다. =====");
+					System.out.println("===== 현재 등록된 회원 수는 " + mc.existMemberNum() + "명입니다. =====");
+					System.out.println("1. 신규 회원 등록");
+					System.out.println("2. 회원 검색");
+					System.out.println("3. 회원 정보 수정");
+					System.out.println("4. 회원 삭제");
+					System.out.println("5. 전체 회원 출력");
+					System.out.println("9. 끝내기");
+					System.out.print("메뉴 번호 : ");
+					int menuChoice = sc.nextInt();
 				
-				switch(menuChoice) {
-					case 1 : insertMember(); break;
-					case 2 : searchMember(); break;
-					case 3 : updateMember(); break;
-					case 4 : deleteMember(); break;
-					case 5 : printAll(); break;
-					case 9 : System.out.println("프로그램 종료합니다."); return;
-					default : System.out.println("잘못입력하셨습니다. 다시 입력해주세요."); break;
+					switch(menuChoice) {
+						case 1 : insertMember(); break;
+						case 2 : searchMember(); break;
+						case 3 : updateMember(); break;
+						case 4 : deleteMember(); break;
+						case 5 : printAll(); break;
+						case 9 : System.out.println("프로그램 종료합니다."); return;
+						default : System.out.println("잘못입력하셨습니다. 다시 입력해주세요."); break;
 				}
-			}
-		} else {
-			// 1-2. 현재 등록된 회원 수가 10명일 때
-			while(true) {
+			} else if(mc.existMemberNum() == 10){
+				// 1-2. 현재 등록된 회원 수가 10명일 때
 				System.out.println("===== 회원 수가 모두 꽉 찼기 때문에 일부 메뉴만 오픈됩니다. =====");
 				System.out.println("2. 회원 검색");
 				System.out.println("3. 회원 정보 수정");
@@ -53,7 +50,7 @@ public class MemberMenu {
 				System.out.println("9. 끝내기");
 				System.out.print("메뉴 번호 : ");
 				int menuChoice = sc.nextInt();
-				
+					
 				switch(menuChoice) {
 					case 2 : searchMember(); break;
 					case 3 : updateMember(); break;
@@ -63,7 +60,7 @@ public class MemberMenu {
 					default : System.out.println("잘못입력하셨습니다. 다시 입력해주세요."); break;
 				}
 			}
-		}
+		} 
 	}
 	
 	// 회원등록정보 입력
@@ -77,6 +74,7 @@ public class MemberMenu {
 		 */
 		String id = "";
 		char gender = ' ';
+		System.out.println("===== 새 회원을 등록합니다. =====");
 		while(true) {
 			// 아이디 중복 확인
 			System.out.print("아이디 입력 : ");
@@ -120,7 +118,7 @@ public class MemberMenu {
 			case 1 : searchId(); break;
 			case 2 : searchName(); break;
 			case 3 : searchEmail(); break;
-			case 9 : return;
+			case 9 : System.out.println("메인메뉴로 돌아갑니다."); return;
 			default : System.out.println("잘못입력하셨습니다. 메인메뉴로 돌아갑니다."); return;
 		}
 	}
@@ -189,7 +187,7 @@ public class MemberMenu {
 			case 1 : updatePassword(); break;
 			case 2 : updateName(); break;
 			case 3 : updateEmail(); break;
-			case 9 : return;
+			case 9 : System.out.println("메인메뉴로 돌아갑니다."); return;
 			default : System.out.println("잘못입력하셨습니다. 메인 메뉴로 돌아갑니다."); return;
 		}
 	}
@@ -269,7 +267,7 @@ public class MemberMenu {
 		switch(menuChoice) {
 			case 1 : deleteOne(); return;
 			case 2 : deleteAll(); return;
-			case 9 : return;
+			case 9 : System.out.println("메인메뉴로 돌아갑니다."); return;
 			default : System.out.println("잘못입력하셨습니다. 메인 메뉴로 돌아갑니다."); return;
 		}
 	}
@@ -306,11 +304,39 @@ public class MemberMenu {
 	
 	// 회원정보 전체 삭제 후 결과 출력
 	public void deleteAll() {
-		
+		/* 1. 정말로 삭제하는지 묻고 사용자에게 값을 받는다.
+		 * 2. 'Y' 입력 시 전체 삭제
+		 * 3. 'N' 입력시 메인메뉴로 돌아감
+		 */
+		System.out.println("===== 전체 회원 삭제 =====");
+		System.out.print("정말로 삭제하시겠습니까?(Y/N)");
+		char choice = sc.next().charAt(0);
+		if(choice == 'N' || choice == 'n') {
+			System.out.println("메인메뉴로 돌아갑니다.");
+			return;
+		} else if(choice == 'Y' || choice == 'y'){
+			mc.delete();
+			System.out.println("성공적으로 삭제하였습니다.");
+		} else if(!(choice == 'Y' || choice == 'y' && choice == 'N' || choice == 'n')){
+			System.out.println("잘못입력하셨습니다. 메인메뉴로 돌아갑니다.");
+		} 
 	}
 	
 	// 전체회원 조회 후 출력
 	public void printAll() {
-		
+		/* 1. MemberController m[]에 저장된 데이터를 가져온다.
+		 * 2-1. 만약 m[]에 저장된 데이터가 있을 경우 저장된 데이터를 전부 출력한다.(빈 데이터는 출력 안함)
+		 * 2-2. 만약 m[]에 저장된 데이터가 없을 경우 "저장된 회원이 없습니다." 출력
+		 */
+		int count = 0;
+		for(int i=0; i<mc.printAll().length; i++) {
+			if(mc.printAll()[i] != null) {
+				System.out.println(mc.printAll()[i].inform());
+				count++;
+			}
+		}
+		if(count == 0) {
+			System.out.println("저장된 회원이 없습니다.");
+		}
 	}
 }
