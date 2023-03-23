@@ -57,7 +57,7 @@ public class ShapeMenu {
 			System.out.println("2. 사각형 면적");
 			System.out.println("3. 사각형 색칠");
 			System.out.println("4. 사각형 정보");
-			System.out.println("메인으로");
+			System.out.println("9. 메인으로");
 			int choiceMenu = sc.nextInt();
 			
 			switch(choiceMenu) {
@@ -88,11 +88,13 @@ public class ShapeMenu {
 			double height = sc.nextDouble();
 			System.out.print("너비 : ");
 			double width = sc.nextDouble();
+			
 			if(menuNum == 1) {
 				System.out.println("사각형 둘레 : " + scr.calcPerimeter(height, width) + "\n");
 			} else if(menuNum == 2) {
 				System.out.println("사각형 면적 : " + scr.calcArea(height, width) + "\n");
 			}
+			
 		} else if(type == 4 && menuNum == 3) {
 			System.out.print("색깔을 입력해주세요 : ");
 			String color = sc.next();
