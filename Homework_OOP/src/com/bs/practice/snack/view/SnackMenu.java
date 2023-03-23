@@ -18,6 +18,7 @@ public class SnackMenu {
 		String name = sc.next();
 		System.out.print("맛 : ");
 		String flavor = sc.next();
+		sc.nextLine();
 		System.out.print("개수 : ");
 		int numOf = sc.nextInt();
 		System.out.print("가격 : ");
