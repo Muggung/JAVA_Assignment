@@ -1,5 +1,6 @@
 package com.bs.hw.person.view;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 import com.bs.hw.person.controller.PersonController;
@@ -131,11 +132,11 @@ public class PersonMenu {
 				System.out.print("학생 학년 : ");
 				int grade = sc.nextInt();
 				System.out.print("학생 전공 : ");
-				String major = sc.nextLine();
+				String major = sc.next();
 				
 				pc.insertStudnet(name, age, height, weight, grade, major);
 				
-				System.out.println("\n=== 이어서 입력하시겠습니까? ===");
+				System.out.println("=== 이어서 입력하시겠습니까? ===");
 				System.out.print("그만하시려면 N 또는 n, 이어하시려면 아무 키나 입력해주세요 : ");
 				char menuChoice = sc.next().charAt(0);
 				
@@ -148,14 +149,56 @@ public class PersonMenu {
 	}
 	
 	public void printStudent() {
-		
+		System.out.println("===== 저장된 학생 정보 =====");
+		for(int i=0; i<pc.printStudent().length; i++) {
+			if(pc.printStudent()[i] != null) {
+				System.out.println(pc.printStudent()[i].toString());
+			}
+		}
+		System.out.println("=======================");
 	}
 	
 	public void insertEmployee() {
-		
+		// insertStudent와 동일
+		while(true) {
+			if(pc.personCount()[1] == 10) {
+				System.out.println("=== 사원 저장공간이 꽉 찼기 때문에 \'사원 추가 메뉴\'를 종료하고 메인메뉴로 돌아갑니다. ===");
+				return;
+			} else {
+				System.out.print("사원 이름 : ");
+				String name = sc.next();
+				System.out.print("사원 나이 : ");
+				int age = sc.nextInt();
+				System.out.print("사원 키 : ");
+				double height = sc.nextDouble();
+				System.out.print("사원 몸무게 : ");
+				double weight = sc.nextDouble();
+				System.out.print("사원 학년 : ");
+				int grade = sc.nextInt();
+				System.out.print("사원 전공 : ");
+				String major = sc.next();
+				
+				pc.insertEmployee(name, age, height, weight, grade, major);
+				
+				System.out.println("=== 이어서 입력하시겠습니까? ===");
+				System.out.print("그만하시려면 N 또는 n, 이어하시려면 아무 키나 입력해주세요 : ");
+				char menuChoice = sc.next().charAt(0);
+				
+				if(menuChoice == 'N' || menuChoice == 'n') {
+					System.out.println("메인메뉴로 돌아갑니다.");
+					return;
+				}
+			}
+		}
 	}
 	
 	public void printEmployee() {
-		
+		System.out.println("===== 저장된 사원 정보 =====");
+		for(int i=0; i<pc.printEmployee().length; i++) {
+			if(pc.printEmployee()[i] != null) {
+				System.out.println(pc.printEmployee()[i].toString());
+			}
+		}
+		System.out.println("=======================");
 	}
 }

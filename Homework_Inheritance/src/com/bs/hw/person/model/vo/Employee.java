@@ -30,6 +30,6 @@ public class Employee extends Person {
 
 	@Override
 	public String toString() {
-		return "Employee [salary=" + salary + ", dept=" + dept + "]";
+		return super.toString() + "월급 : " + salary + ", 부서 : " + dept;
 	}
 }

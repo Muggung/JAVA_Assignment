@@ -49,6 +49,6 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", age=" + age + ", height=" + height + ", weight=" + weight + "]";
+		return "이름 : " + name + ", 나이 : " + age + ", 키 : " + height + ", 몸무게 : " + weight +", ";
 	}
 }
