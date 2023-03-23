@@ -1,11 +1,13 @@
 package com.bs.practice.chap02_abstractNInterface.model.vo;
 
+// SmartPhone 상속, NotePen Interface 상속
 public class GalaxyNote9 extends SmartPhone implements NotePen{
-	
+	// 브랜드 값 초기화 
 	public GalaxyNote9() {
 		super.setMaker("삼성");
 	}
 	
+	// Interface & 추상메소드 구현
 	@Override
 	public String makeCall() {
 		return "번호를 누르고 통화버튼을 누름";
@@ -39,7 +41,6 @@ public class GalaxyNote9 extends SmartPhone implements NotePen{
 	@Override
 	public String printlnformation() {
 		String result = makeCall() + "\n" + takeCall() + "\n" + picture() + "\n" + charge() + "\n" + touch() + "\n블루투스 펜 탑재 여부 : " + bluetoothPen() + "\n";
-		
 		return "갤럭시 노트9은 삼성에서 만들어졌고 제원은 다음과 같다.\n" + result;
 	}
 }

@@ -1,11 +1,12 @@
 package com.bs.practice.chap02_abstractNInterface.model.vo;
 
 public class V40 extends SmartPhone implements NotePen{
-	
+	// 브랜드 값 초기화
 	public V40() {
 		super.setMaker("LG");
 	}
 	
+	// Interface & 추상메소드 구현
 	@Override
 	public String makeCall() {
 		return "번호를 누르고 통화버튼을 누름";
