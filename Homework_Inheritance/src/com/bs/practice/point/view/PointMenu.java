@@ -13,21 +13,18 @@ public class PointMenu {
 	// 메인 메뉴 출력
 	public void mainMenu() {
 		while(true) {
-			while(true) {
-				System.out.println("===== 메뉴 =====");
-				System.out.println("1. 원");
-				System.out.println("2. 사각형");
-				System.out.println("9. 끝내기");
-				System.out.print("메뉴 번호 : ");
-				int choice = sc.nextInt();
-				
-				switch(choice) {
-					case 1 : circleMenu(); break;
-					case 2 : rectangleMenu(); break;
-					case 9 : System.out.println("프로그램을 종료합니다."); return;
-					default : System.out.println("잘못입력하셨습니다. 다시 입력해주세요."); break;
-				}
-
+			System.out.println("===== 메뉴 =====");
+			System.out.println("1. 원");
+			System.out.println("2. 사각형");
+			System.out.println("9. 끝내기");
+			System.out.print("메뉴 번호 : ");
+			int choice = sc.nextInt();
+			
+			switch(choice) {
+				case 1 : circleMenu(); break;
+				case 2 : rectangleMenu(); break;
+				case 9 : System.out.println("프로그램을 종료합니다."); return;
+				default : System.out.println("잘못입력하셨습니다. 다시 입력해주세요."); break;
 			}
 		}
 	}
