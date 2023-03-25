@@ -16,8 +16,7 @@ public class NumberMenu {
 		int secondNum = sc.nextInt();
 		
 		try {
-			System.out.println(firstNum +  "은(는) " + secondNum + "의 배수인가? " + 
-			nc.checkDouble(firstNum, secondNum));
+			System.out.println(firstNum +  "은(는) " + secondNum + "의 배수인가? " + nc.checkDouble(firstNum, secondNum));
 		}catch(NumRangException e) {
 			e.printStackTrace();
 		}

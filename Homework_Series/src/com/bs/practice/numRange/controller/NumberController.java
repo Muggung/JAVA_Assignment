@@ -13,6 +13,8 @@ public class NumberController {
 			return false;
 		} else if(num1 % num2 == 0) {
 			return true;
-		} else return false;
+		} else {
+			return false;
+		}
 	}
 }
