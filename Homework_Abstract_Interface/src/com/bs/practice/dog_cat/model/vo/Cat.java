@@ -1,4 +1,4 @@
-package package3.model.vo;
+package com.bs.practice.dog_cat.model.vo;
 
 public class Cat extends Animal {
 	private String location;

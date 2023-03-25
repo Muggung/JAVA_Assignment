@@ -1,6 +1,6 @@
-package packege3.controller;
+package com.bs.practice.dog_cat.controller;
 
-import package3.model.vo.*;
+import com.bs.practice.dog_cat.model.vo.*;
 
 public class AnimalManager {
 	public static void main(String[] args) {
