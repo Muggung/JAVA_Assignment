@@ -1,4 +1,4 @@
-package com.bs.pratice.token.controller;
+package com.bs.practice.token.controller;
 
 import java.util.StringTokenizer;
 

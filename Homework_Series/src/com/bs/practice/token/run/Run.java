@@ -1,6 +1,6 @@
-package com.bs.pratice.token.run;
+package com.bs.practice.token.run;
 
-import com.bs.pratice.token.view.TokenMenu;
+import com.bs.practice.token.view.TokenMenu;
 
 public class Run {
 

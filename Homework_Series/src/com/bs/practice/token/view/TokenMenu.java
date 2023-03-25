@@ -1,8 +1,8 @@
-package com.bs.pratice.token.view;
+package com.bs.practice.token.view;
 
 import java.util.Scanner;
 
-import com.bs.pratice.token.controller.TokenController;
+import com.bs.practice.token.controller.TokenController;
 
 public class TokenMenu {
 	Scanner sc = new Scanner(System.in);
