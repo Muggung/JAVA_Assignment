@@ -1,4 +1,4 @@
-package com.bs.practice.controller;
+package com.bs.practice.score.controller;
 
 import java.io.DataInputStream;
 import java.io.FileNotFoundException;
