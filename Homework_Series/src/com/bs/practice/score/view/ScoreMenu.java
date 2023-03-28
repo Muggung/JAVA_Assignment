@@ -2,14 +2,11 @@ package com.bs.practice.score.view;
 
 import java.io.DataInputStream;
 import java.io.EOFException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
-import com.bs.practice.controller.ScoreController;
+import com.bs.practice.score.controller.ScoreController;
 
 public class ScoreMenu {
 	private Scanner sc = new Scanner(System.in);
