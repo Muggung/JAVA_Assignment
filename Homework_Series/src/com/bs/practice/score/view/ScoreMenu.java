@@ -2,6 +2,7 @@ package com.bs.practice.score.view;
 
 import java.io.DataInputStream;
 import java.io.EOFException;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -69,7 +70,7 @@ public class ScoreMenu {
 		
 		System.out.println("이름\t국어\t영어\t수학\t총점\t평균");
 		try(DataInputStream dis = scr.readScore();
-			FileReader fr = new FileReader("./Score")) {
+			FileReader fr = new FileReader("./Score.txt")) {
 			int data = fr.read();
 	
 			while(data != -1) {
@@ -87,10 +88,12 @@ public class ScoreMenu {
 				
 				System.out.println(name + "\t" + kor + "\t" + eng + "\t" + math + "\t" + sum + "\t" + avg);
 			}
-		} catch(EOFException e) {
+		}catch(EOFException e) {
 			System.out.println("읽은 횟수 : " + count + " 전체합계 : " + sumAll + " 전체평균 : " + avgAll);
-		} catch(IOException e) {
+		}catch(FileNotFoundException e) {
 			e.printStackTrace();
-		}
+		}catch(IOException e) {
+			e.printStackTrace();
+		} 
 	}
 }

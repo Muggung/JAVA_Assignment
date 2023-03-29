@@ -10,8 +10,7 @@ import java.io.IOException;
 
 public class ScoreDAO {
 	public void saveScore(String name, int kor, int eng, int math, int sum, double avg) {
-		try(FileOutputStream fos = new FileOutputStream("./Score.txt", true);
-			DataOutputStream dos = new DataOutputStream(fos)) {
+		try(DataOutputStream dos = new DataOutputStream(new FileOutputStream("./Score.txt", true))) {
 			dos.writeUTF(name);
 			dos.writeInt(kor);
 			dos.writeInt(eng);
