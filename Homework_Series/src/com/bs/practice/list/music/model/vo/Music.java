@@ -54,6 +54,9 @@ public class Music implements Comparable<Music>{
 	
 	@Override
 	public int compareTo(Music o) {
-		return 0;
+		if(this.title.compareTo(o.getTitle()) == 0) {
+			return this.singer.compareTo(o.getSinger());
+		} 
+		return this.title.compareTo(o.getTitle());
 	}
 }

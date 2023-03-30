@@ -63,10 +63,12 @@ public class MusicController {
 	}
 	
 	public int ascTitle() {
-		
+		list.sort((m1, m2) -> m1.compareTo(m2));
+		return 1;
 	}
 	
 	public int descSinger() {
-		
+		list.sort((m1, m2) -> m2.getSinger().compareTo(m1.getSinger()));
+		return 1;
 	}
 }

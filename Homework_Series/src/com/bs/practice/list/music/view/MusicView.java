@@ -130,10 +130,18 @@ public class MusicView {
 	}
 	
 	public void ascTitle() {
-		
+		if(mc.ascTitle() > 0) {
+			System.out.println("정렬 성공");
+		} else {
+			System.out.println("정렬 실패");
+		}
 	}
 	
 	public void descSinger() {
-		
+		if(mc.descSinger() > 0) {
+			System.out.println("정렬 성공");
+		} else {
+			System.out.println("정렬 실패");
+		}
 	}
 }
