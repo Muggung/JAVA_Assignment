@@ -1,8 +1,10 @@
 package com.bs.practice.list.music.controller;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import com.bs.practice.list.music.compare.AscTitle;
 import com.bs.practice.list.music.model.vo.Music;
 
 public class MusicController {
@@ -63,12 +65,12 @@ public class MusicController {
 	}
 	
 	public int ascTitle() {
-		list.sort((m1, m2) -> m1.compareTo(m2));
+		list.sort(new AscTitle());
 		return 1;
 	}
 	
 	public int descSinger() {
-		list.sort((m1, m2) -> m2.getSinger().compareTo(m1.getSinger()));
+		Collections.sort(list);
 		return 1;
 	}
 }

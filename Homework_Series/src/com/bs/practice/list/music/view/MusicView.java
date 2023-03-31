@@ -129,6 +129,7 @@ public class MusicView {
 		}
 	}
 	
+	// 곡명 오름차순
 	public void ascTitle() {
 		if(mc.ascTitle() > 0) {
 			System.out.println("정렬 성공");
@@ -137,6 +138,7 @@ public class MusicView {
 		}
 	}
 	
+	// 가수명 내림차순
 	public void descSinger() {
 		if(mc.descSinger() > 0) {
 			System.out.println("정렬 성공");
