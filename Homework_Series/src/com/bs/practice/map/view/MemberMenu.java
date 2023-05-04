@@ -65,9 +65,9 @@ public class MemberMenu {
 			System.out.print("이름 : ");
 			String name = sc.nextLine();
 			
-			Member m = new Member(password, name);
+			Member member = new Member(password, name);
 			
-			if(mc.joinMembership(id, m)) {
+			if(mc.joinMembership(id, member)) {
 				System.out.println("성공적으로 회원가입 완료하였습니다. :)");
 				return;
 			} else {
@@ -90,6 +90,12 @@ public class MemberMenu {
 
 			if(name == null) {
 				System.out.println("틀린 아이디 또는 비밀번호입니다.");
+				System.out.print("메인 메뉴로 돌아가겠습니까(Y/N)?");
+				char choice = sc.next().charAt(0);
+				
+				if(choice == 'Y' || choice == 'y') {
+					return;
+				}
 			} else {
 				System.out.println(name + "님, 환영합니다!");
 				break;
@@ -150,9 +156,8 @@ public class MemberMenu {
 		System.out.println("=====***** 같은 이름 조회 *****======");
 		System.out.print("검색할 이름 : ");
 		sc.nextLine();
-		String name = sc.nextLine();
 		
-		TreeMap<String, String> nameMap = mc.sameName(name);
+		TreeMap<String, String> nameMap = mc.sameName(sc.nextLine());
 		
 		Set<String> keys = nameMap.keySet();
 		

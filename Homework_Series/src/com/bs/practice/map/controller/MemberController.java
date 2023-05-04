@@ -9,9 +9,9 @@ import com.bs.practice.map.model.vo.Member;
 public class MemberController {
 	private HashMap<String, Member> map = new HashMap<String, Member>();
 	
-	public boolean joinMembership(String id, Member m) {
+	public boolean joinMembership(String id, Member memeber) {
 		if(!map.containsKey(id)) {
-			map.put(id, m);
+			map.put(id, memeber);
 			return true;
 		} return false;
 	}
